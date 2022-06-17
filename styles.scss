@@ -10,11 +10,19 @@ $color2: #038C3E;
 $color3: #000;
 $color4: #808080;
 $color5: #fff;
+
+$mapa1: (
+    20px: red,
+    40px: orange,
+    60px: green,
+);
+
+
 /*NAV START*/
 
 .navbar-dark .navbar-nav .nav-link {
     color: $color2;
-    font-family: $font4
+    font-family: $font4;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover{
@@ -33,7 +41,7 @@ $color5: #fff;
     background-image: url(/images/banner-3.jpg);
     background-size: cover;
     background-position: center;
-    height: 600px;
+    height: 700px;
     color: black;
     text-shadow: 0px 1px  #A0AFA0;
     border-radius: 0;
@@ -61,6 +69,24 @@ $color5: #fff;
 
 }
 // JUMBOTRON END
+// Pagos Start
+.pagos{
+    display: flex;
+    justify-content: center;
+    background-color: $color5;
+    height: 100px;
+}
+
+.pagos h4{
+    margin: 35px;
+}
+
+.pagos i{
+    font-size: 70px;
+    margin-top: 20px;
+    color: $color3;
+}
+// Pagos END
 /* Nosotros Start */
 h2 {
     text-align: center;
@@ -69,6 +95,7 @@ h2 {
     padding: 20px;
     margin-bottom: 0;
     font-family: $font4;
+    width: 100%;
 }
 
 .nosotros {
@@ -79,12 +106,30 @@ h2 {
     font-family: $font4;
 }
 
-.quinesomos{
+.quienesomos {
     padding: 10px;
-    font-family: $font2;
+    font-family: $font1;
+}
+
+.FrenteJMR{
+    border-width: 1px;
+    border-style: Solid;
+    margin: 0px 5px; 
+    width:500px;
+    height:400px;
+}
+
+.FrenteJMR:hover{
+    transform: scale(1.1);
+    transition: all 2s;
 }
 /* Nosotros END */
 /* Productos START */
+
+.container-fluid {
+    align-self: center;
+}
+
 .card img{
     height: 300px;
     width: 200px;
@@ -108,8 +153,6 @@ footer{
     width: 100%;
     padding: 50px 0px;
     font-family: 'Nunito', sans-serif;
-    *background-color: var(--color-esqueleto);
-    background-image: url("../Images/background-footer.svg");
     background-size: cover;
 }
 
@@ -180,52 +223,12 @@ footer{
     }
 }
 
-// FOOTER END
-/*PRODUCTOS.HTML START*/
-
-.container__article2 .box__article2 img{
-    width: 250px;
-    height: 300px;
-    background-color: $color2;
-    margin: 20px;
-    border-radius: 8px;
-}
-
-.container__article2 {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    width: 100%;
-    margin: 5%;
-    grid-gap: 30px;
-}
-
-.body__text2 {
-    width: 100%;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Poppins', sans-serif;
-    background-color: $color2;
-    border-radius: 8px;
-    color: white;
-}
-
-@media screen and (max-width: 760px){
-    .container__article2{
-        max-width: 1000px;
-        padding: 0px 20px;
-        margin: auto;
-        margin-top: 0px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center
-    }
-}
-// PRODUCTOS.HTML END
+// FOOTER END //
 /*CONTACTO.HTML START*/
 
 .contacto {
-    background: $color2;
-    width: 450px;
+    background: $color1;
+    width: 500px;
     margin: auto;
     padding: 10px 20px;
     box-sizing: border-box;
@@ -239,7 +242,7 @@ footer{
     margin: 0;
     margin-bottom: 20px;
     font-size: 30px;
-    background-color: $color2;
+    background-color: $color1;
     font-family: $font4;
 }
 input, textarea{
@@ -258,13 +261,20 @@ textarea {
 }
 
 #boton {
-    background: rgba(0, 0, 0, 0.918);
+    background: $color4;
     color: $color5;
     padding: 20px;
+    border-radius: 15px;
 }
 
 #boton:hover {
     cursor: pointer;
-    background: rgba(5, 5, 5, 0.5);
+    background: $color2;
 }
+@media (max-width:480px) {
+    form{
+        width: 100%;
+    }
+}
+
 /*CONTACTO END*/
